@@ -1,0 +1,1 @@
+(function(){var t="dark";try{t=localStorage.getItem("jt_theme")||t}catch(e){try{t=(JSON.parse(window.name||"{}")).jt_theme||t}catch(_){}}document.documentElement.setAttribute("data-theme",t==="light"?"light":"dark")})()

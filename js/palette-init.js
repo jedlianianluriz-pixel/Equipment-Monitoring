@@ -1,0 +1,1 @@
+(function(){var p=null;try{p=localStorage.getItem("jt_palette")}catch(e){try{p=(JSON.parse(window.name||"{}")).jt_palette}catch(_){}}if(p&&/^(ocean|emerald|sunset|violet|rose|gold|graphite)$/.test(p))document.documentElement.setAttribute("data-palette",p)})()

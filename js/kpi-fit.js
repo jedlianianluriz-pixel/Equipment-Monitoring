@@ -1,0 +1,4 @@
+/* Keep the Ongoing Repair / Calibration breakdown font size identical to the Needs Attention panel */
+(function(){function sync(){var src=document.getElementById("attnBreak"),dst=document.getElementById("calBreak");if(!src||!dst)return;var sb=src.querySelector("b"),sl=src.querySelector("em");if(!sb||!sl)return;var card=dst.closest(".kpi");if(!card)return;card.style.setProperty("--bkfs",getComputedStyle(src).fontSize);card.style.setProperty("--bknfs",getComputedStyle(sb).fontSize)}
+function init(){var src=document.getElementById("attnBreak");if(!src)return;sync();var k=src.closest(".kpi");if(window.ResizeObserver&&k)new ResizeObserver(sync).observe(k);new MutationObserver(sync).observe(src,{childList:true,subtree:true});window.addEventListener("resize",sync)}
+if(document.readyState==="loading")document.addEventListener("DOMContentLoaded",init);else init()})();
